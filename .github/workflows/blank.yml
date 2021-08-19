@@ -32,9 +32,14 @@ jobs:
 
       - name: Install dependencies
         run: yarn
-
+        with:
+          BRANCH: main
+          FOLDER: ci-app
       - name: Build
         run: yarn build
+        with:
+          BRANCH: main
+          FOLDER: ci-app
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
